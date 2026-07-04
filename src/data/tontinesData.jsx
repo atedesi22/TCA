@@ -1,0 +1,72 @@
+// src/data/tontinesData.js
+const tontinesData = [
+    {
+        id: 1,
+        name: 'Tontine Scolaire',
+        shortDescription: 'Préparez l\'avenir éducatif de vos enfants en toute sérénité.',
+        longDescription: 'La Tontine Scolaire de TCA est l\'épargne qui vous permet de planifier les études de vos enfants en toute sécurité. C\'est un compte bloqué jusqu\'à la période définie par l\'entreprise, vous assurant que l\'argent sera disponible au moment de la rentrée scolaire.',
+        minAmount: 500, // XAF
+        type: 'Épargne',
+        duration: 'Annuelle',
+        targetAudience: 'Parents',
+        icon: 'MdOutlineSchool', // Pour React Icons
+        image: '/img/tontine-school.jpg', // Remplacez par une image représentative
+        slug: 'tontine-scolaire',
+        isPopular: true,
+    },
+    {
+        id: 2,
+        name: 'Tontine Investissement',
+        shortDescription: 'Développez vos projets avec un capital conséquent et sécurisé.',
+        longDescription: 'La Tontine Investissement vous permet de cotiser en groupe pour accumuler un capital important, idéal pour le lancement ou l\'expansion de vos projets personnels ou professionnels. Bénéficiez d\'une gestion transparente et d\'un accompagnement dédié.',
+        minAmount: 50000,
+        type: 'Investissement',
+        duration: 'Mensuelle',
+        targetAudience: 'Entrepreneurs, Particuliers',
+        icon: 'MdOutlineTrendingUp',
+        image: '/img/tontine-invest.jpg',
+        slug: 'tontine-investissement',
+        isPopular: true,
+    },
+    {
+        id: 3,
+        name: 'Tontine Immobilière',
+        shortDescription: 'Réalisez votre rêve immobilier grâce à une épargne collective.',
+        longDescription: 'La Tontine Immobilière de TCA est conçue pour faciliter l\'accès à la propriété. Épargnez ensemble et bénéficiez d\'un fonds de roulement pour l\'achat, la construction ou la rénovation de votre bien immobilier. Des experts vous guident à chaque étape.',
+        minAmount: 100000,
+        type: 'Immobilier',
+        duration: 'Annuelle',
+        targetAudience: 'Acquéreurs, Propriétaires',
+        icon: 'MdOutlineHomeWork',
+        image: '/img/tontine-immobiliere.jpg',
+        slug: 'tontine-immobiliere',
+    },
+    {
+        id: 4,
+        name: 'Tontine Familiale',
+        shortDescription: 'Épargnez pour les événements importants de votre famille.',
+        longDescription: 'La Tontine Familiale est une solution d\'épargne flexible pour financer les événements de la vie (mariages, naissances, voyages). Gérez vos cotisations en toute simplicité et assurez la réussite de vos projets familiaux.',
+        minAmount: 10000,
+        type: 'Épargne',
+        duration: 'Mensuelle',
+        targetAudience: 'Familles',
+        icon: 'MdOutlineFamilyRestroom',
+        image: '/img/tontine-family.jpg',
+        slug: 'tontine-familiale',
+    },
+    {
+        id: 5,
+        name: 'Tontine Santé',
+        shortDescription: 'Anticipez les dépenses de santé avec un soutien mutuel.',
+        longDescription: 'La Tontine Santé vous offre une tranquillité d\'esprit face aux imprévus médicaux. Contribuez régulièrement et bénéficiez d\'une aide financière pour les consultations, médicaments ou hospitalisations, dans un esprit de solidarité.',
+        minAmount: 20000,
+        type: 'Santé',
+        duration: 'Trimestrielle',
+        targetAudience: 'Toute personne',
+        icon: 'MdOutlineLocalHospital',
+        image: '/img/tontine-health.jpg',
+        slug: 'tontine-sante',
+    },
+];
+
+export default tontinesData;
