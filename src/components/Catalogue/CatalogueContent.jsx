@@ -1,9 +1,10 @@
 // src/components/Catalogue/CatalogueContent.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import FilterSidebar from './FilterSidebar';
 import MobileFilterDrawer from './MobileFilterDrawer';
 import ProductGrid from './ProductGrid';
-import { MdOutlineTune, IoSearchOutline } from 'react-icons/md';
+import { MdOutlineTune, IoSearchOutline, MdOutlineGridView, MdOutlineList } from 'react-icons/md';
+import productsData from '../../data/productsData';
 
 function CatalogueContent() {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -114,7 +115,7 @@ function CatalogueContent() {
                         {/* Icônes de Vue (Grid/List) */}
                         <div className="hidden md:flex items-center space-x-2 text-xl text-gray-500">
                             <MdOutlineGridView className="text-[#4CAF50] cursor-pointer" />
-                            <MdOutlineViewList className="cursor-pointer hover:text-[#4CAF50]" />
+                            <MdOutlineList className="cursor-pointer hover:text-[#4CAF50]" />
                         </div>
                     </div>
                     {/* Bouton Filtre Mobile (visible sur mobile) */}

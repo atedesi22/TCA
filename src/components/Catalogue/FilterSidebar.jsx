@@ -1,6 +1,9 @@
 // src/components/Catalogue/FilterSidebar.jsx
 import React, { useState } from 'react';
-import { MdOutlineCategory, MdOutlineAttachMoney, MdOutlineKeyboardArrowRight, MdOutlineGridView, MdOutlineViewList } from 'react-icons/md';
+import { IoSearchOutline } from 'react-icons/io5';
+import { MdOutlineTune, MdOutlineCategory, MdOutlineAttachMoney, MdOutlineKeyboardArrowRight, MdOutlineGridView, MdOutlineViewList } from 'react-icons/md';
+import ProductGrid from './ProductGrid';
+import MobileFilterDrawer from './MobileFilterDrawer';
 
 const categories = [
     { name: 'Électroménager', count: 12 },
@@ -14,9 +17,10 @@ const priceRanges = [
     { label: 'Plus de 50 000 XAF', value: 'high' },
 ];
 
-function FilterSidebar({ onFilterChange }) {
+function FilterSidebar({ filteredAndSortedProducts, sortBy, searchTerm, selectedCategories, setSelectedCategories, selectedPriceRanges, setSelectedPriceRanges, onFilterChange }) {
     const [activeCategories, setActiveCategories] = useState([]);
     const [activePrices, setActivePrices] = useState([]);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     const toggleCategory = (name) => {
         const newCategories = activeCategories.includes(name)
@@ -106,3 +110,95 @@ function FilterSidebar({ onFilterChange }) {
 
 export default FilterSidebar;
 
+
+
+
+// src/components/Catalogue/FilterSidebar.jsx
+// import React from 'react'; // Retirer useState si les états sont gérés par le parent
+// import { MdOutlineCategory, MdOutlineAttachMoney, MdOutlineKeyboardArrowRight } from 'react-icons/md';
+
+// const categoriesData = [ // Renommé pour éviter confusion avec `categories` du state
+//     { name: 'Électroménager', count: 12 },
+//     { name: 'Électronique', count: 8 },
+//     { name: 'Mobilier', count: 5 },
+//     { name: 'Mode', count: 2 },
+// ];
+
+// const priceRangesData = [ // Renommé pour éviter confusion
+//     { label: 'Moins de 10 000 XAF', value: 'less_10k' },
+//     { label: 'Plus de 50 000 XAF', value: 'more_50k' },
+// ];
+
+// function FilterSidebar({ selectedCategories, setSelectedCategories, selectedPriceRanges, setSelectedPriceRanges }) {
+    
+//     const toggleCategory = (name) => {
+//         const newCategories = selectedCategories.includes(name)
+//             ? selectedCategories.filter(c => c !== name)
+//             : [...selectedCategories, name];
+//         setSelectedCategories(newCategories);
+//     };
+
+//     const togglePrice = (value) => {
+//         const newPrices = selectedPriceRanges.includes(value)
+//             ? selectedPriceRanges.filter(p => p !== value)
+//             : [...selectedPriceRanges, value];
+//         setSelectedPriceRanges(newPrices);
+//     };
+
+//     return (
+//         <div className="space-y-8">
+//             <h3 className="text-xl font-bold text-darkText mb-4">Filtrer par</h3>
+
+//             {/* Filtre Catégories */}
+//             <div className="space-y-3">
+//                 <div className="flex items-center font-semibold text-darkText mb-2">
+//                     <MdOutlineCategory className="mr-2 text-xl" /> Catégories
+//                 </div>
+//                 {categoriesData.map((cat, index) => (
+//                     <div key={index} className="flex items-center space-x-2 cursor-pointer select-none">
+//                         <input
+//                             type="checkbox"
+//                             id={`cat-${cat.name}`}
+//                             checked={selectedCategories.includes(cat.name)}
+//                             onChange={() => toggleCategory(cat.name)}
+//                             className="h-4 w-4 text-primaryGreen border-gray-300 rounded focus:ring-primaryGreen"
+//                         />
+//                         <label htmlFor={`cat-${cat.name}`} className="text-lightText hover:text-darkText transition duration-150 flex-1 flex justify-between">
+//                             {cat.name} <span className="text-xs">({cat.count})</span>
+//                         </label>
+//                     </div>
+//                 ))}
+//             </div>
+
+//             {/* Filtre Prix */}
+//             <div className="space-y-3">
+//                 <div className="flex items-center font-semibold text-darkText mb-2">
+//                     <MdOutlineAttachMoney className="mr-2 text-xl" /> Prix
+//                 </div>
+//                 {priceRangesData.map((range, index) => (
+//                     <div key={index} className="flex items-center space-x-2 cursor-pointer select-none">
+//                         <input
+//                             type="checkbox"
+//                             id={`price-${range.value}`}
+//                             checked={selectedPriceRanges.includes(range.value)}
+//                             onChange={() => togglePrice(range.value)}
+//                             className="h-4 w-4 text-primaryGreen border-gray-300 rounded focus:ring-primaryGreen"
+//                         />
+//                         <label htmlFor={`price-${range.value}`} className="text-lightText hover:text-darkText transition duration-150">
+//                             {range.label}
+//                         </label>
+//                     </div>
+//                 ))}
+//             </div>
+            
+//             {/* Simulation de "Simuler maintenant" pour le mobile, si le parent le souhaite */}
+//             <div className="md:hidden mt-8">
+//                 <button className="bg-primaryGreen text-white w-full py-2 rounded-lg font-semibold hover:bg-darkGreen transition">
+//                     Simuler maintenant
+//                 </button>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default FilterSidebar;

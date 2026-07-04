@@ -1,6 +1,7 @@
 // src/components/TontineDetail/TontineContent.jsx
 import React from 'react';
-import { MdOutlineCheckCircleOutline, MdOutlineQuestionAnswer } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { MdOutlineCheckCircleOutline, MdOutlineQuestionAnswer, MdOutlineChevronRight } from 'react-icons/md';
 import { IoTimerOutline, IoDocumentTextOutline, IoWalletOutline } from 'react-icons/io5';
 
 // Données fictives d'étapes (adaptées de la maquette "Comment ça marche ?")

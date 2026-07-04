@@ -10,7 +10,7 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        primaryGreen: '#4CAF50', // Un vert pour votre charte
+        primaryGreen: '#4CAF50', // sdfsdUn vert pour votre charte
         darkGreen: '#388E3C',
         lightGray: '#F5F5F5',
         darkText: '#333333',

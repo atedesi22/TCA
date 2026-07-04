@@ -8,6 +8,7 @@ import TontinesListHeader from '../components/TontinesList/TontinesListHeader';
 import TontineCard from '../components/TontinesList/TontineCard';
 import tontinesData from '../data/tontinesData'; // Import des données de tontines
 import { MdOutlineTune } from 'react-icons/md';
+import { IoSearchCircleOutline } from 'react-icons/io5';
 
 // Liste des options de filtre/tri pour les tontines (peut être plus élaborée)
 const tontineTypes = ['Toutes', 'Épargne', 'Investissement', 'Immobilier', 'Santé'];
@@ -79,7 +80,7 @@ function TontinesListPage() {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <IoSearchOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
+                        <IoSearchCircleOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
                     </div>
 
                     {/* Filtres Type (Desktop) */}

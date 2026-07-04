@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import ProductDetailHeader from '../components/ProductDetail/ProductDetailHeader';
 import ProductInfo from '../components/ProductDetail/ProductInfo';
 import SimilarProducts from '../components/ProductDetail/SimilarProducts';
-import productsData from '../data/productData';
+import productsData from '../data/productsData';
 // import productsData from '../data/productsData'; // Import des données de produits
 
 function ProductDetailPage() {

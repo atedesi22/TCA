@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MdOutlineLocalOffer, MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import productsData from '../../data/productData';
+import productsData from '../../data/productsData';
 // import {productsData} from '../../data/productsData'; // Import des données de produits
 
 function SimilarProducts({ currentProductId }) {
